@@ -1,0 +1,42 @@
+{% load static %}
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+<div>
+    <div>
+        <label for="numb1">Первое число</label>
+        <input id="numb1" name="numb1" type="text" required>
+    </div>
+    <div>
+        <label for="numb2">Второе число</label>
+        <input id="numb2" name="numb2" type="text" required>
+    </div>
+
+    <p>
+        <button id="add">+</button>
+        <button id="subtract">-</button>
+        <button id="multiply">*</button>
+        <button id="divide">/</button>
+    </p>
+
+    <textarea rows="1" cols="30" id="res" placeholder="Результат:"></textarea>
+    <p id="error"></p>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+
+<script type="text/javascript" src="{% static 'calculator.js' %}"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+</script>
+</body>
+</html>
