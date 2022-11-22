@@ -12,7 +12,7 @@ def add(request, *args, **kwargs):
             res = numb1 + numb2
             answer['res'] = res
         except ValueError as e:
-            answer['error'] = 'There is a non-numeric value among the entered values'
+            answer['error'] = 'Введите числовое значение'
             return JsonResponse(answer, status=400)
     return JsonResponse(answer)
 
@@ -26,7 +26,7 @@ def subtract(request, *args, **kwargs):
             numb2 = int(numbers['B'])
             res = numb1 - numb2
         except ValueError as e:
-            answer['error'] = 'There is a non-numeric value among the entered values'
+            answer['error'] = 'Введите числовое значение'
             return JsonResponse(answer, status=400)
     answer['res'] = res
     return JsonResponse(answer)
@@ -41,7 +41,7 @@ def multiply(request, *args, **kwargs):
             numb2 = int(numbers['B'])
             res = numb1 * numb2
         except ValueError as e:
-            answer['error'] = 'There is a non-numeric value among the entered values'
+            answer['error'] = 'Введите числовое значение'
             return JsonResponse(answer, status=400)
     answer['res'] = res
     return JsonResponse(answer)
@@ -55,7 +55,7 @@ def divide(request, *args, **kwargs):
             numb1 = int(numbers['A'])
             numb2 = int(numbers['B'])
         except ValueError as e:
-            answer['error'] = 'There is a non-numeric value among the entered values'
+            answer['error'] = 'Введите числовое значение'
         try:
             res = numb1 / numb2
             answer['res'] = res
